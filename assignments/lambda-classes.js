@@ -42,7 +42,7 @@ class Student extends Person{
         this.grade =  Math.floor(Math.random() * 101)
     }
         listSubjects(){
-            return this.favSubjects
+            this.favSubjects.forEach(element => console.log(element))
         }
         PRAssignment(subject){
             return `${this.name} has submitted a PR for ${subject}.`
@@ -52,7 +52,7 @@ class Student extends Person{
         }
         graduate(){
             if (this.grade > 70){
-                    return "You are a graduate. Congrats!!"
+                    return `You are a graduate. Congrats ${this.name}!!`
             }
         }   
 }
@@ -200,6 +200,15 @@ console.log(nisa.sprintChallenge('User Interface'))
 console.log(marguel.debugsCode(nisa, 'Javascript'))
 console.log(darren)
 console.log(pat.age)
+console.log(dan.gradeStudent(kevin))
+console.log(kevin.grade)
+console.log(kevin.graduate())
+console.log(dan.gradeStudent(kevin))
+console.log(kevin.grade)
+console.log(kevin.graduate())
+console.log(dan.gradeStudent(kevin))
+console.log(kevin.grade)
+console.log(kevin.graduate())
 console.log(dan.gradeStudent(kevin))
 console.log(kevin.grade)
 console.log(kevin.graduate())
