@@ -23,7 +23,13 @@ class Instructor extends Person{
     }
     grade(student, subject){
         return `${student.name} receives a perfect score on ${subject}.`
-
+    }
+    gradeStudent(student){
+        if (Math.round(Math.random()) == 1){
+            student.grade += Math.floor(Math.random() * 11)
+        }else{
+            student.grade -= Math.floor(Math.random() * 11)
+        }
     }
 }
 
@@ -33,6 +39,7 @@ class Student extends Person{
         this.previousBackground = studentAttr.previousBackground
         this.className = studentAttr.className
         this.favSubjects = studentAttr.favSubjects
+        this.grade =  Math.floor(Math.random() * 101)
     }
         listSubjects(){
             return this.favSubjects
@@ -43,7 +50,11 @@ class Student extends Person{
         sprintChallenge(subject){
             return `${this.name} has begun sprint challenge on ${subject}.`
         }
-        
+        graduate(){
+            if (this.grade > 70){
+                    return "You are a graduate. Congrats!!"
+            }
+        }   
 }
 
 class ProjectManager extends Instructor{
@@ -189,3 +200,42 @@ console.log(nisa.sprintChallenge('User Interface'))
 console.log(marguel.debugsCode(nisa, 'Javascript'))
 console.log(darren)
 console.log(pat.age)
+console.log(dan.gradeStudent(kevin))
+console.log(kevin.grade)
+console.log(kevin.graduate())
+console.log(dan.gradeStudent(kevin))
+console.log(kevin.grade)
+console.log(kevin.graduate())
+console.log(dan.gradeStudent(kevin))
+console.log(kevin.grade)
+console.log(kevin.graduate())
+console.log(dan.gradeStudent(kevin))
+console.log(kevin.grade)
+console.log(kevin.graduate())
+console.log(dan.gradeStudent(kevin))
+console.log(kevin.grade)
+console.log(kevin.graduate())
+console.log(dan.gradeStudent(kevin))
+console.log(kevin.grade)
+console.log(kevin.graduate())
+console.log(dan.gradeStudent(kevin))
+console.log(kevin.grade)
+console.log(kevin.graduate())
+console.log(dan.gradeStudent(kevin))
+console.log(kevin.grade)
+console.log(kevin.graduate())
+console.log(dan.gradeStudent(kevin))
+console.log(kevin.grade)
+console.log(kevin.graduate())
+console.log(dan.gradeStudent(kevin))
+console.log(kevin.grade)
+console.log(kevin.graduate())
+console.log(dan.gradeStudent(kevin))
+console.log(kevin.grade)
+console.log(kevin.graduate())
+console.log(dan.gradeStudent(kevin))
+console.log(kevin.grade)
+console.log(kevin.graduate())
+console.log(dan.gradeStudent(kevin))
+console.log(kevin.grade)
+console.log(kevin.graduate())
